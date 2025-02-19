@@ -8,40 +8,29 @@
 </head>
 <body>
     <header>
-        <h1>Finance Projects</h1>
+        <div class="logo">My Portfolio</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="finance.html">Finance</a></li>
-                <li><a href="econ.html">Economics</a></li>
-                <li><a href="football.html">Football</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="finance.html">Finance</a>
+            <a href="econ.html">Econ</a>
+            <a href="football.html">Football</a>
         </nav>
     </header>
-    <main>
-        <section id="finance-projects">
-            <div class="project-grid">
-                <div class="project-tile">
-                    <a href="finance/project1/index.html">
-                        <img src="finance/project1/preview.jpg" alt="Finance Project 1 Preview">
-                        <h3>Finance Project 1</h3>
-                        <p>Short description of Finance Project 1.</p>
-                    </a>
-                </div>
-                <div class="project-tile">
-                    <a href="finance/project2/index.html">
-                        <img src="finance/project2/preview.jpg" alt="Finance Project 2 Preview">
-                        <h3>Finance Project 2</h3>
-                        <p>Short description of Finance Project 2.</p>
-                    </a>
-                </div>
-                <!-- Add more finance projects as needed -->
+
+    <section>
+        <h1>Finance Projects</h1>
+        <div class="projects-container">
+            <div class="project-tile" data-link="finance/project1/index.html">
+                <div class="project-preview" style="background-image: url('finance/project1/preview.jpg');"></div>
+                <div class="project-name">Finance Project 1</div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Your Name</p>
-    </footer>
+            <div class="project-tile" data-link="finance/project2/index.html">
+                <div class="project-preview" style="background-image: url('finance/project2/preview.jpg');"></div>
+                <div class="project-name">Finance Project 2</div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
