@@ -6,6 +6,7 @@
 }
 body {
     scroll-behavior: smooth;
+    background: #f9f9f9;
 }
 header {
     background: #333;
@@ -29,19 +30,19 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 nav a:hover {
-    text-decoration: underline;
+    color: #ffcc00;
 }
 section {
     padding: 100px 20px;
     min-height: 100vh;
+    text-align: center;
 }
 #about {
     background: #f4f4f4;
-}
-#projects {
-    background: #ddd;
+    padding-top: 80px;
 }
 .projects-container {
     display: grid;
@@ -57,9 +58,10 @@ section {
     text-align: center;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 350px; /* Increased height */
+    height: 400px; /* Increased tile height */
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 .project-tile:hover {
     transform: scale(1.05);
