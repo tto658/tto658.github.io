@@ -3,139 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            scroll-behavior: smooth;
-            background: #f9f9f9;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        section {
-            padding: 100px 20px;
-            min-height: 100vh;
-            text-align: center;
-        }
-        .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .project-tile {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        .project-tile:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-        }
-        .project-preview {
-            flex-grow: 1;
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 80%;
-        }
-        .project-name {
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            font-weight: bold;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll(".project-tile").forEach(tile => {
-                tile.addEventListener("click", function () {
-                    const link = this.getAttribute("data-link");
-                    if (link) {
-                        window.location.href = link;
-                    }
-                });
-            });
-        });
-    </script>
+    <title>Finance Projects</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">My Custom Name</div>
+        <h1>Finance Projects</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="finance.html">Finance</a>
-            <a href="econ.html">Econ</a>
-            <a href="football.html">Football</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="econ.html">Economics</a></li>
+                <li><a href="football.html">Football</a></li>
+            </ul>
         </nav>
     </header>
-    
-    <section id="finance">
-        <h1>Finance Projects</h1>
-        <div class="projects-container">
-            <div class="project-tile" data-link="projects/finance1.html">
-                <div class="project-preview" style="background-image: url('images/finance1.png');"></div>
-                <div class="project-name">Finance Project 1</div>
+    <main>
+        <section id="finance-projects">
+            <div class="project">
+                <a href="finance/project1/index.html">
+                    <img src="finance/project1/preview.jpg" alt="Project 1 Preview">
+                    <h3>Finance Project 1</h3>
+                    <p>Short description of Finance Project 1.</p>
+                </a>
             </div>
-        </div>
-    </section>
-    
-    <section id="econ">
-        <h1>Economics Projects</h1>
-        <div class="projects-container">
-            <div class="project-tile" data-link="projects/econ1.html">
-                <div class="project-preview" style="background-image: url('images/econ1.png');"></div>
-                <div class="project-name">Econ Project 1</div>
+            <div class="project">
+                <a href="finance/project2/index.html">
+                    <img src="finance/project2/preview.jpg" alt="Project 2 Preview">
+                    <h3>Finance Project 2</h3>
+                    <p>Short description of Finance Project 2.</p>
+                </a>
             </div>
-        </div>
-    </section>
-    
-    <section id="football">
-        <h1>Football Projects</h1>
-        <div class="projects-container">
-            <div class="project-tile" data-link="projects/football1.html">
-                <div class="project-preview" style="background-image: url('images/football1.png');"></div>
-                <div class="project-name">Football Project 1</div>
-            </div>
-        </div>
-    </section>
+            <!-- Add more finance projects as needed -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
