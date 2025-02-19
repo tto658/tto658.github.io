@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finance Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".project-tile").forEach(tile => {
+                tile.addEventListener("click", function () {
+                    const link = this.getAttribute("data-link");
+                    if (link) {
+                        window.location.href = link;
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -16,21 +28,27 @@
             <a href="football.html">Football</a>
         </nav>
     </header>
-
-    <section>
+    
+    <section id="finance">
         <h1>Finance Projects</h1>
         <div class="projects-container">
             <div class="project-tile" data-link="finance/project1/index.html">
-                <div class="project-preview" style="background-image: url('finance/project1/preview.jpg');"></div>
+                <div class="project-preview" style="background-image: url('finance/project1/preview.png');"></div>
                 <div class="project-name">Finance Project 1</div>
             </div>
             <div class="project-tile" data-link="finance/project2/index.html">
-                <div class="project-preview" style="background-image: url('finance/project2/preview.jpg');"></div>
+                <div class="project-preview" style="background-image: url('finance/project2/preview.png');"></div>
                 <div class="project-name">Finance Project 2</div>
+            </div>
+            <div class="project-tile" data-link="finance/project3/index.html">
+                <div class="project-preview" style="background-image: url('finance/project3/preview.png');"></div>
+                <div class="project-name">Finance Project 3</div>
+            </div>
+            <div class="project-tile" data-link="finance/project4/index.html">
+                <div class="project-preview" style="background-image: url('finance/project4/preview.png');"></div>
+                <div class="project-name">Finance Project 4</div>
             </div>
         </div>
     </section>
-
-    <script src="script.js"></script>
 </body>
 </html>
